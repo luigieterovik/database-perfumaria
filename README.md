@@ -1,0 +1,1 @@
+<p>Projeto com banco de dados relacional, utilizando o SGBD <b>MySQL</b>. Possui consultas com <i>stored procedure</i>, <i>stored function</i> e <i>trigger</i>. Além disso, foram aplicados index composto, roles e views com intuito de otimizar consultas.</p>
