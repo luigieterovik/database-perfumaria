@@ -25,9 +25,6 @@ begin
 end //
 delimiter ;
 
-select cliente_oferta (5);
-
-
 # Aplica à compra o valor de desconto, se o usuário possui
 delimiter // 
 create trigger oferta_venda before insert on venda for each row
@@ -39,7 +36,3 @@ begin
 end //
 delimiter ;
 
-insert into venda (usuario_id, nome_cliente, data_venda, valor_total, tipo_pagamento) values
-(5, 'Vitor', '2023-03-25', 280.00, 'debito');
-
-select * from venda;

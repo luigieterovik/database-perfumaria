@@ -2,6 +2,15 @@ create database perfumaria;
 
 use perfumaria;
 
+create table usuario (
+	id int not null primary key auto_increment,
+    login varchar(45) not null,
+	senha char(32) not null,
+    email varchar(60) not null,
+    telefone varchar(12) not null,
+    funcionario char(1) not null default 'N'
+);
+
 create table venda (
 	id int not null auto_increment primary key,
     usuario_id int not null,
@@ -28,13 +37,4 @@ create table venda_produto (
     primary key (venda_id, produto_id),
     constraint fk_venda_id foreign key (venda_id) references venda (id),
     constraint fk_produto_id foreign key (produto_id) references produto (id)
-);
-
-create table usuario (
-	id int not null primary key auto_increment,
-    login varchar(45) not null,
-	senha char(32) not null,
-    email varchar(60) not null,
-    telefone varchar(12) not null,
-    funcionario char(1) not null default 'N'
 );
